@@ -1,0 +1,18 @@
+<!--miniprogram/pages/getTimetable/getTimetable.wxml-->
+
+
+<van-cell-group>
+  <van-field value="{{ username }}" required clearable label="学号" icon="question-o" placeholder="请输入学号" bind:click-icon="onClickIcon" bindchange="inputname"  />
+
+  <van-field value="{{ password }}" type="password" label="密码" placeholder="请输入密码" required border="{{ false }}" bindchange="inputpassword" />
+
+  <van-field value="{{code}}" type="text" label="验证码" placeholder="请输入验证码" required border="{{ false }}" bindchange="inputcode" />
+</van-cell-group>
+
+<van-toast id="van-toast" />
+
+<image src="{{imageUrl}}" mode='aspectFit' style="width:100px,height:30px">
+</image>
+
+<van-button square type="primary" block bind:click="addData" >导入课表</van-button>
+

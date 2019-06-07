@@ -1,0 +1,4 @@
+/* pages/add/add.wxss */
+.value-class {
+  flex: none !important;
+}

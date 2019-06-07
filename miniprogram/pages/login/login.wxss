@@ -1,0 +1,17 @@
+/* miniprogram/pages/login/login.wxss */
+page{
+  height: 100%
+}
+.userimage{
+  display: flex;
+  align-items: center;
+  height: 90%;
+  justify-content: center;
+}
+.userinfo-avatar {
+  width: 150px;
+  height: 150px;
+  margin: 20rpx;
+  background-size: cover;
+  background-color: white;
+}

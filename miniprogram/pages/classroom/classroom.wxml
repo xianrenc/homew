@@ -1,0 +1,3 @@
+<van-field value="{{ classroom }}" required clearable label="教室" placeholder="请输入教室名称"  bindchange="classroom"/>
+
+<van-button square type="primary" block bind:click="classroomtable"  >导入课表</van-button>

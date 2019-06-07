@@ -1,0 +1,82 @@
+
+.section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  background-color: #d2e6b3;
+  color: #7cba23;
+}
+.month{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width:50rpx;
+  font-size: 10pt;
+}
+.top-text {
+  width: 100rpx;
+  height: 100rpx;
+  font-size: 10pt;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+
+}
+
+.left {
+  width: 50rpx;
+  height: 100rpx;
+  font-size: 9pt;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.flex-item {
+  width: 95rpx;
+  height: 100px;
+}
+
+.kcb-item {
+  position: absolute;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.smalltext {
+  font-size: 8pt;
+  color: #fff;
+  padding-left: 2px;
+}
+
+.scroll {
+  height: 980rpx;
+  z-index: 101;
+  position: fixed;
+}
+
+.table {
+  height:1150rpx;
+  width:730rpx;
+  display:flex;
+}
+
+.number{
+  background-color:#D2E6B3;
+  color:#7cba23;
+}
+
+.add{
+  width: 750rpx;
+  position: fixed;
+  bottom:0;
+}
+
+

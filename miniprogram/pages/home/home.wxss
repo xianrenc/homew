@@ -1,0 +1,6 @@
+/* pages/home/home.wxss */
+.section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

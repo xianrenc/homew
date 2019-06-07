@@ -1,0 +1,45 @@
+<!--miniprogram/pages/teachertable/teachertable.wxml-->
+
+<view class="section">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="picker">
+          周数：{{array[week]}}
+        </view>
+  </picker>
+</view>
+
+<view class="top">
+  <view class="month">
+   <text>{{month}}\n月</text>
+  </view>
+  <view class="top-text" wx:for="{{weekArrays}}" wx:key="item">
+    <text>{{item.week}}{{item.date}}</text>
+  </view>
+</view>
+
+<view>
+
+<scroll-view scroll-y="true" class="scroll">
+  <view class="table">
+    <!--节数-->
+    <view class="number">
+     <view wx:for="{{numberArrays}}" wx:key="item" class="left">
+        {{item}}
+     </view>
+    </view>
+
+    <!--划线-->
+    <view wx:for="{{numberArrays}}" wx:key="item">
+      <view style="width:750rpx;margin-top:{{(index+1)*100}}rpx;  position: absolute;border-bottom:1rpx solid {{index==3||index==7?'red':'lightgray'}};">
+      </view>
+    </view>
+    <!--课表-->
+    <view wx:for="{{timetable}}" wx:key="item">
+      <view class="flex-item kcb-item"  data-index="{{index}}" style="margin-left:{{(item.week-1)*100}}rpx;margin-top:{{(item.courseStart-1)*100+5}}rpx;height:{{item.courselength*100-5}}rpx;background-color:{{colorArrays[index%9]}}" wx:if="{{(week>=item.week_start&&week<=item.week_end)&&(item.oddeven<0||item.oddeven!=week%2)}}">
+        <view class="smalltext" >{{item.coursename}}<text>\n</text>{{item.classroom}}
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+</view>

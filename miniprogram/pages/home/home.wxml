@@ -1,0 +1,11 @@
+<view class="section">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{weeks}}" type="primary">
+        <view class="picker">
+          星期：{{weeks[week]}}
+        </view>
+  </picker>
+</view>
+<van-cell-group>  
+   <van-cell wx:for="{{timetable}}" wx:for-item="item" wx:key="index" title="{{item.coursename}}" value="{{item.teacher}}" label="{{item.classroom}}" border="{{ false }}" />
+</van-cell-group>
+<van-button square type="primary" block bind:click="navigateTotimetable">我的课表</van-button>
